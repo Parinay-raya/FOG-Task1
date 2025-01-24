@@ -1,0 +1,35 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Your custom styles */
+
+/* Optional custom styles */
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  margin-right: 10px;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+}

@@ -1,0 +1,149 @@
+/* Product Grid Container */
+.product-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Product Image */
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay for Like, Share, Compare on hover */
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+/* Icon buttons (Like, Share, Compare) on hover */
+.icon-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65%;
+}
+
+.icon-btn button img {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-btn button span {
+  font-size: 12px;
+  color: white;
+}
+
+/* Product Details */
+.product-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  margin-bottom: 2px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Add to Cart */
+.add-to-cart {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  opacity: 0;   /* Initially hidden */
+  visibility: hidden;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-bottom: 90%;
+}
+
+.product-card:hover .add-to-cart {
+  opacity: 1;   /* Visible on hover */
+  visibility: visible;
+}
+
+.add-to-cart:hover {
+  background-color: #ef5777;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 990px) {
+  .product-grid-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns for medium screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product-grid-container {
+    grid-template-columns: 1fr;  /* 1 column for small screens */
+  }
+}

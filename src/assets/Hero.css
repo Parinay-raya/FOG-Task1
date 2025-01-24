@@ -1,0 +1,70 @@
+/* src/components/Hero.css */
+.hero-container {
+  position: relative;
+  min-height: 300px;
+}
+
+.hero-background {
+  background-image: url('https://t4.ftcdn.net/jpg/05/51/69/95/360_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg');
+  background-size: cover;
+  background-position: center 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* Keeps the background behind the text */
+}
+
+.hero-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(104, 104, 104, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  min-height: 300px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 42px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+  /* Dark text color */
+}
+
+.tag {
+  font-size: 20px;
+  color: #000000;
+}
+
+.tag span {
+  font-size: 24px;
+  color: #393939;
+}
+
+.hero p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero p a:hover {
+  color: #000;
+}
